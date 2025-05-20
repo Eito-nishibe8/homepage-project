@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>入力内容の確認</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="contact-form-container">
+        <h1>入力内容の確認</h1>
+        <ul class="confirm-list">
+            <li><strong>お名前：</strong>{{ data['name'] }}</li>
+            <li><strong>フリガナ：</strong>{{ data['furigana'] }}</li>
+            <li><strong>電話番号：</strong>{{ data['phone'] }}</li>
+            <li><strong>メールアドレス：</strong>{{ data['email'] }}</li>
+            <li><strong>お問い合わせ内容：</strong><br>{{ data['message'] | nl2br }}</li>
+        </ul>
+
+        <div class="form-buttons">
+            <!-- 戻るボタン（GETでフォームに戻る） -->
+            <form action="{{ url_for('contact') }}" method="GET" style="display: inline;">
+                <button type="submit">戻る</button>
+            </form>
+
+            <!-- 送信ボタン（POSTして送信） -->
+            <form action="{{ url_for('confirm') }}" method="POST" style="display: inline;">
+                <button type="submit">送信する</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

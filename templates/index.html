@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〇〇建設会社</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="hero">
+        <header class="navbar">
+            <div class="logo">〇〇建設会社</div>
+            <nav class="nav-links">
+                <a href="#">企業情報</a>
+                <a href="#">ニュース</a>
+                <a href="#">投資家の皆様へ</a>
+                <a href="#">サステナビリティ</a>
+                <a href="#">メルディアグループについて</a>
+            </nav>
+        </header>
+
+        <div class="hero-content">
+            <h1>独自のデザインと技術で<br>住まい手に最適な家をつくる</h1>
+            <p>分譲住宅、注文住宅から、新築アパートや賃貸物件まで。<br>住宅に関する“すべて”を自社で生産しています。</p>
+        </div>
+
+        <div class="circle-button">
+            <p>気になる！！</p>
+            <span>お問合せフォーム</span>
+            <a href="{{ url_for('contact') }}">Click ➜</a>
+        </div>
+    </div>
+
+    <section class="features-section">
+        <div class="feature-box scroll-fade-in">
+            <img src="{{ url_for('static', filename='images/barrier_free.jpg') }}" alt="バリアフリー住宅">
+            <h2>バリアフリー住宅</h2>
+            <p class="subtitle">Barrier free</p>
+            <p class="description">家への思いやライフスタイルは人それぞれです。〇〇建設ではバリアフリーコーディネーターが、現実を見つめ、数十年後を思い描きながら、お客様と一緒に家をつくっていきます。
+            </p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <div class="feature-box scroll-fade-in">
+            <img src="{{ url_for('static', filename='images/renovation.jpg') }}" alt="リノベーション">
+            <h2>リノベーション</h2>
+            <p class="subtitle">renovation</p>
+            <p class="description">より長く、より快適に住み継ぐために。〇〇建設のリノベーションは断熱や耐震などの性能の向上はもちろん、住まい心地にこだわり、より一層の豊かな暮らしを実現します。</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="feature-box scroll-fade-in">
+            <img src="{{ url_for('static', filename='images/se_method.jpg') }}" alt="重量木骨の家">
+            <h2>重量木骨の家</h2>
+            <p class="subtitle">SE Construction Method</p>
+            <p class="description">
+                デザイン性と住宅性能、さらに耐震性を兼ね備えた「重量木骨」の家。特殊な集成材や接合金具を使うSE構法により、吹き抜けやビルトインガレージなど、木だけでは支えきれなかった構造を実現します。
+            </p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <div class="feature-box scroll-fade-in">
+            <img src="{{ url_for('static', filename='images/institution.jpg') }}" alt="施設建築／法人の方向け">
+            <h2>施設建築／法人の方向け</h2>
+            <p class="subtitle">Institution</p>
+            <p class="description">
+                お客様の多様なニーズに対して、常に寄り添い、きめ細やかにカスタマイズしながら、ぬくもりが感じられる施設をつくる。それが「阿部建設の施設建築」の強みです。
+            </p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </section>
+
+    <section class="president-message scroll-fade-in">
+        <div class="message-image">
+            <img src="{{ url_for('static', filename='images/president.jpg') }}" alt="社長の写真">
+        </div>
+        <div class="message-text">
+            <h2>社長メッセージ</h2>
+            <p class="subtitle">Message</p>
+            <p>当たり前の仕事<br>当たり前の家づくり</p>
+            <a href="#" class="message-button">社長メッセージを見る</a>
+        </div>
+    </section>
+
+    <section class="company-info scroll-fade-in">
+        <div class="company-info-overlay">
+            <div class="company-info-content">
+                <h2>会社情報</h2>
+                <p class="subtitle">Company</p>
+                <ul>
+                    <li><strong>住所：</strong>長野県〇〇市　1-2-3</li>
+                    <li><strong>営業時間：</strong>10:00～17:00</li>
+                    <li><strong>TEL：</strong>000-000-1234</li>
+                    <li><strong>住宅：</strong>〇〇建設</li>
+                    <li><strong>不動産：</strong>〇〇不動産</li>
+                    <li><strong>社団法人：</strong>〇〇社団法人</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+
+</html>
