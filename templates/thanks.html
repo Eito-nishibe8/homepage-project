@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ完了</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="contact-form-container">
+        <h1>お問い合わせありがとうございました！</h1>
+        <p>内容を受け付けました。後日、担当者よりご連絡いたします。</p>
+
+        <div class="form-buttons">
+            <a href="{{ url_for('home') }}" class="button">メインページへ戻る</a>
+        </div>
+    </div>
+</body>
+
+</html>

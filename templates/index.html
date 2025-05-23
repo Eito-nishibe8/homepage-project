@@ -12,12 +12,21 @@
     <div class="hero">
         <header class="navbar">
             <div class="logo">〇〇建設会社</div>
+            <div class="header-info">
+                <div class="contact-info">
+                    <div class="phone-line">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">0000-000-0000</span>
+                    </div>
+                    <span class="time">【営業時間】8:00～17:00（土曜 8:00～12:00）</span>
+                    <span class="closed">【定休日】日曜・祝日</span>
+                </div>
+            </div>
+
             <nav class="nav-links">
-                <a href="#">企業情報</a>
-                <a href="#">ニュース</a>
-                <a href="#">投資家の皆様へ</a>
-                <a href="#">サステナビリティ</a>
-                <a href="#">メルディアグループについて</a>
+                <a href="#about">・会社情報</a>
+                <a href="#news">・お知らせ</a>
+                <a href="{{ url_for('investors') }}">・採用情報</a>
             </nav>
         </header>
 
@@ -40,7 +49,7 @@
             <p class="subtitle">Barrier free</p>
             <p class="description">家への思いやライフスタイルは人それぞれです。〇〇建設ではバリアフリーコーディネーターが、現実を見つめ、数十年後を思い描きながら、お客様と一緒に家をつくっていきます。
             </p>
-            <a href="#" class="read-more">Read more</a>
+            <a href="/barrier_free" class="read-more">Read more</a>
         </div>
 
         <div class="feature-box scroll-fade-in">
@@ -74,6 +83,15 @@
         </div>
     </section>
 
+
+    <section class="recruit-info">
+        <h2>採用情報</h2>
+        <p>〇〇建設では<strong>正社員として一緒に働く仲間</strong>を募集しています。</p>
+        <p>未経験からのスタートも大歓迎！<br>「手に職をつけたい」「地域に貢献したい」そんな想いを持った方、ぜひご応募ください。</p>
+        <p>資格取得支援や安心の教育制度も整えており、<br><strong>働きながらスキルアップ</strong>を目指せます。</p>
+        <a href="/investors" class="recruit-button">採用情報を見る</a>
+    </section>
+
     <section class="president-message scroll-fade-in">
         <div class="message-image">
             <img src="{{ url_for('static', filename='images/president.jpg') }}" alt="社長の写真">
@@ -86,7 +104,48 @@
         </div>
     </section>
 
-    <section class="company-info scroll-fade-in">
+    <section class="news" id="news">
+        <h2>お知らせ</h2>
+        <p>〇〇建設からの最新のお知らせです。イベント情報や不動産情報などをお届けします。</p>
+
+        <div class="news-item">
+            <span class="date">2025.05.20</span>
+            <span class="tag">お知らせ</span>
+            <p>新しいオフィスをオープンしました！</p>
+        </div>
+
+        <div class="news-item">
+            <span class="date">2025.04.23</span>
+            <span class="tag">お知らせ</span>
+            <p>ゴールデンウィーク期間中（5/3〜5/6）の営業について</p>
+        </div>
+
+        <div class="news-item">
+            <span class="date">2025.04.09</span>
+            <span class="tag">お知らせ</span>
+            <p>TikTokはじめました！</p>
+        </div>
+
+        <div class="news-item">
+            <span class="date">2025.03.01</span>
+            <span class="tag">イベント</span>
+            <p>春の住宅相談フェア開催決定！</p>
+        </div>
+
+        <div class="news-item">
+            <span class="date">2025.02.15</span>
+            <span class="tag">採用情報</span>
+            <p>新卒採用ページを更新しました。説明会も受付中！</p>
+        </div>
+    </section>
+
+    <div class="construction-count">
+        <span class="label">詳細施工事例</span>
+        <span class="number">466</span><span class="unit">件</span>
+        <span class="update">(2025年03月現在)</span>
+    </div>
+
+    <section class="company-info scroll-fade-in" id="about">
         <div class="company-info-overlay">
             <div class="company-info-content">
                 <h2>会社情報</h2>

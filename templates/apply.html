@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>応募フォーム | 〇〇建設</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <section class="apply-form">
+        <h2>応募フォーム</h2>
+        <p>以下のフォームに必要事項を入力し、「送信」ボタンを押してください。</p>
+
+        <form action="/submit_application" method="post">
+            <label>お名前 <span>*</span></label>
+            <input type="text" name="name" required>
+
+            <label>フリガナ <span>*</span></label>
+            <input type="text" name="furigana" required>
+
+            <label>電話番号 <span>*</span></label>
+            <input type="tel" name="phone" required>
+
+            <label>メールアドレス <span>*</span></label>
+            <input type="email" name="email" required>
+
+            <label for="position">希望職種</label>
+            <select id="position" name="position" required>
+                <option value="">選択してください</option>
+                <option value="大工">大工</option>
+                <option value="現場監督">現場監督</option>
+                <option value="その他">その他</option>
+            </select>
+
+            <label for="message">志望動機・自己PR</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- 送信ボタン -->
+            <button type="submit">送信</button>
+
+            <!-- 採用情報に戻るボタン -->
+            <a href="/investors" class="back-button">採用情報に戻る</a>
+
+        </form>
+    </section>
+</body>
+
+</html>

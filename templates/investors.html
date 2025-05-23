@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>採用情報 | 〇〇建設</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <section class="recruit">
+        <h2>採用情報</h2>
+        <p>〇〇建設では、一緒に働く仲間を募集しています。未経験の方も歓迎！成長を全力でサポートします。</p>
+
+        <div class="job-posting">
+            <h3>正社員募集 - 建築業（大工）</h3>
+            <ul>
+                <li><strong>募集職種：</strong> 建築作業員（大工）</li>
+                <li><strong>雇用形態：</strong> 正社員</li>
+                <li><strong>応募条件：</strong> 未経験可、学歴不問、普通免許があれば尚可</li>
+                <li><strong>勤務地：</strong> 東京都内・千葉・神奈川・埼玉エリア</li>
+                <li><strong>給与：</strong> 月給25万円〜50万円（経験・能力に応じて決定）</li>
+                <li><strong>年収例：</strong> 入社2年目／年収420万円</li>
+                <li><strong>勤務時間：</strong> 8:00〜17:00（休憩1.5時間）</li>
+                <li><strong>休日：</strong> 週休2日制（日曜＋他）、祝日、年末年始休暇</li>
+                <li><strong>福利厚生：</strong> 社会保険完備、交通費支給、資格取得支援制度</li>
+            </ul>
+            <a href="/apply" class="apply-btn">応募する</a>
+            <a href="{{ url_for('home') }}" class="back-button">メインページに戻る</a>
+        </div>
+    </section>
+</body>
+
+</html>

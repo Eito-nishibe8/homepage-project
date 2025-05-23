@@ -8,6 +8,9 @@ def home():
     return render_template('index.html')
 
 
+@app.route('/investors')
+def investors():
+    return render_template('investors.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -56,6 +59,8 @@ def confirm():
 
 
 
+
+
 @app.route('/complete')
 def complete():
     return render_template('complete.html')
@@ -69,9 +74,37 @@ from markupsafe import Markup
 def nl2br(value):
     return Markup(value.replace("\n", "<br>"))
 
+@app.route("/apply")
+def apply():
+    return render_template("apply.html")
+
+@app.route("/submit_application", methods=["POST"])
+def submit_application():
+    # フォームデータ取得
+    name = request.form["name"]
+    email = request.form["email"]
+    furigana = request.form["furigana"]
+    position = request.form["position"]
+    phone = request.form["phone"]
+    message = request.form["message"]
+    print(f"応募あり：{name}, {email},{furigana},{phone}, {position}, {message}")
+    
+    # 応募完了ページにリダイレクト
+    return redirect(url_for('thanks'))
+
+@app.route("/thanks")
+def thanks():
+    return render_template("thanks.html")
+
+
+
+@app.route("/barrier_free")
+def barrier_free():
+    return render_template("barrier_free.html")
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 
 
 

@@ -1,0 +1,72 @@
+/* static/css/barrier_free.css */
+
+.barrierfree-header {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barrierfree-header .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.barrierfree-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.barrierfree-header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.barrierfree-content {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 2;
+    color: #333;
+}
+
+.barrierfree-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.barrierfree-content h3 {
+    margin-top: 40px;
+    font-size: 1.4em;
+    color: #555;
+}
+
+.features-list {
+    margin: 20px 0;
+    padding-left: 1.5em;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: #888;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #666;
+}
