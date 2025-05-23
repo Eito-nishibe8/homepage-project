@@ -8,9 +8,12 @@ def home():
     return render_template('index.html')
 
 
+
 @app.route('/investors')
 def investors():
     return render_template('investors.html')
+
+
 
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -61,6 +64,9 @@ def confirm():
 
 
 
+
+
+
 @app.route('/complete')
 def complete():
     return render_template('complete.html')
@@ -73,6 +79,7 @@ from markupsafe import Markup
 @app.template_filter('nl2br')
 def nl2br(value):
     return Markup(value.replace("\n", "<br>"))
+
 
 @app.route("/apply")
 def apply():
@@ -105,6 +112,11 @@ def barrier_free():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
 
 

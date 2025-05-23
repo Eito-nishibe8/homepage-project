@@ -18,6 +18,7 @@
     box-sizing: border-box;
 }
 
+
 /*---------------------------------------------------*/
 
 
@@ -163,6 +164,8 @@
 
 /*------------------------------------------------------*/
 
+
+
 body,
 html {
     height: 100%;
@@ -172,7 +175,11 @@ html {
 /* ヒーローセクション */
 .hero {
     position: relative;
+
     background-image: url('images/company_bg.jpg');
+
+    background-image: url('images/house2.jpg');
+
     /* ここに背景画像を入れてね */
     background-size: cover;
     background-position: center;
@@ -191,6 +198,7 @@ html {
 
 .logo {
     font-weight: bold;
+
     font-size: 20px;
 }
 
@@ -220,6 +228,17 @@ html {
 }
 
 /*-----------------------------------------------------------------------------*/
+
+.nav-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
 
 
 /* キャッチコピー */
@@ -515,6 +534,7 @@ button {
     margin-bottom: 15px;
     font-size: 1rem;
     line-height: 1.6;
+
 }
 
 /*-----------------------------------スクロール---------------------------------------*/
@@ -925,4 +945,6 @@ html {
 
 .back-button:hover {
     background-color: #666;
+
+
 }

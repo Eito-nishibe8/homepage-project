@@ -27,7 +27,13 @@
                 <a href="#about">・会社情報</a>
                 <a href="#news">・お知らせ</a>
                 <a href="{{ url_for('investors') }}">・採用情報</a>
-            </nav>
+                <nav class="nav-links">
+                    <a href="#">企業情報</a>
+                    <a href="#">ニュース</a>
+                    <a href="#">投資家の皆様へ</a>
+                    <a href="#">サステナビリティ</a>
+                    <a href="#">メルディアグループについて</a>
+                </nav>
         </header>
 
         <div class="hero-content">
@@ -47,16 +53,21 @@
             <img src="{{ url_for('static', filename='images/barrier_free.jpg') }}" alt="バリアフリー住宅">
             <h2>バリアフリー住宅</h2>
             <p class="subtitle">Barrier free</p>
-            <p class="description">家への思いやライフスタイルは人それぞれです。〇〇建設ではバリアフリーコーディネーターが、現実を見つめ、数十年後を思い描きながら、お客様と一緒に家をつくっていきます。
+            <p class="description">
+                家への思いやライフスタイルは人それぞれです。〇〇建設ではバリアフリーコーディネーターが、現実を見つめ、数十年後を思い描きながら、お客様と一緒に家をつくっていきます。
             </p>
             <a href="/barrier_free" class="read-more">Read more</a>
+
+            <a href="#" class="read-more">Read more</a>
+
         </div>
 
         <div class="feature-box scroll-fade-in">
             <img src="{{ url_for('static', filename='images/renovation.jpg') }}" alt="リノベーション">
             <h2>リノベーション</h2>
             <p class="subtitle">renovation</p>
-            <p class="description">より長く、より快適に住み継ぐために。〇〇建設のリノベーションは断熱や耐震などの性能の向上はもちろん、住まい心地にこだわり、より一層の豊かな暮らしを実現します。</p>
+            <p class="description">より長く、より快適に住み継ぐために。〇〇建設のリノベーションは断熱や耐震などの性能の向上はもちろん、住まい心地にこだわり、より一層の豊かな暮らしを実現します。
+            </p>
             <a href="#" class="read-more">Read more</a>
         </div>
     </section>
@@ -83,7 +94,6 @@
         </div>
     </section>
 
-
     <section class="recruit-info">
         <h2>採用情報</h2>
         <p>〇〇建設では<strong>正社員として一緒に働く仲間</strong>を募集しています。</p>
@@ -91,6 +101,8 @@
         <p>資格取得支援や安心の教育制度も整えており、<br><strong>働きながらスキルアップ</strong>を目指せます。</p>
         <a href="/investors" class="recruit-button">採用情報を見る</a>
     </section>
+
+
 
     <section class="president-message scroll-fade-in">
         <div class="message-image">
@@ -146,23 +158,26 @@
     </div>
 
     <section class="company-info scroll-fade-in" id="about">
-        <div class="company-info-overlay">
-            <div class="company-info-content">
-                <h2>会社情報</h2>
-                <p class="subtitle">Company</p>
-                <ul>
-                    <li><strong>住所：</strong>長野県〇〇市　1-2-3</li>
-                    <li><strong>営業時間：</strong>10:00～17:00</li>
-                    <li><strong>TEL：</strong>000-000-1234</li>
-                    <li><strong>住宅：</strong>〇〇建設</li>
-                    <li><strong>不動産：</strong>〇〇不動産</li>
-                    <li><strong>社団法人：</strong>〇〇社団法人</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
-    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+        <section class="company-info scroll-fade-in">
+
+            <div class="company-info-overlay">
+                <div class="company-info-content">
+                    <h2>会社情報</h2>
+                    <p class="subtitle">Company</p>
+                    <ul>
+                        <li><strong>住所：</strong>長野県〇〇市　1-2-3</li>
+                        <li><strong>営業時間：</strong>10:00～17:00</li>
+                        <li><strong>TEL：</strong>000-000-1234</li>
+                        <li><strong>住宅：</strong>〇〇建設</li>
+                        <li><strong>不動産：</strong>〇〇不動産</li>
+                        <li><strong>社団法人：</strong>〇〇社団法人</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
 </body>
 
 </html>
