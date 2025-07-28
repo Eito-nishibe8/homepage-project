@@ -109,11 +109,6 @@ def thanks():
 def barrier_free():
     return render_template("barrier_free.html")
 
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
-
-
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -1,4 +1,4 @@
-/* アニメーションの初期状態 */
+/* ------------------------------アニメーションの初期状態------------------------------ */
 .scroll-fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -18,37 +18,35 @@
     box-sizing: border-box;
 }
 
-
-/*---------------------------------------------------*/
-
-
-/* ヘッダー全体 */
+/*------------------------------ ヘッダー全体------------------------------ */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    font-size: 16px;
-    flex-wrap: wrap;
-    background-color: white;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-/* ロゴ */
 .logo {
-    font-size: 50px;
     font-weight: bold;
-    margin-right: 30px;
-    white-space: nowrap;
+    font-size: 25px;
 }
 
-/* 施工事例＋連絡先のコンテナ */
+.tel {
+    font-size: 35px;
+    color: orange;
+}
+
+/* ------------------------------施工事例＋連絡先のコンテナ------------------------------ */
 .header-info {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
+    /* 横中央 */
+    align-items: center;
+    /* 縦中央 */
+    gap: 10px;
+    flex: 1;
 }
 
 /* 施工事例 */
@@ -64,7 +62,7 @@
     line-height: 1.5;
 }
 
-/* スマホ対応：縦並びに切り替え */
+/* ------------------------------スマホ対応：縦並びに切り替え------------------------------ */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -77,11 +75,10 @@
         z-index: 100;
     }
 
+    /* 親要素に text-align: center を指定 */
     .header-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-top: 10px;
+        text-align: center;
+        /* ここで中央揃え */
     }
 
     .nav-links {
@@ -187,21 +184,6 @@ html {
     color: white;
 }
 
-/* ナビバー */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.logo {
-    font-weight: bold;
-
-    font-size: 20px;
-}
-
 /*-----------------------------------ヘッダー白文字-------------------------------*/
 .nav-links {
     border-radius: 12px;
@@ -225,23 +207,10 @@ html {
     /* ホバー時うっすら白背景 */
     transform: translateX(5px);
     /* ホバー時にちょい右に動かす */
-}
-
-/*-----------------------------------------------------------------------------*/
-
-.nav-links a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.nav-links a:hover {
     text-decoration: underline;
 }
 
-
-/* キャッチコピー */
+/* ------------------------------キャッチコピー------------------------------ */
 .hero-content {
     position: absolute;
     bottom: 120px;
@@ -262,19 +231,19 @@ html {
 /* 丸型ボタン */
 .circle-button {
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
     right: 40px;
     background: white;
     color: black;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -356,49 +325,139 @@ html {
     gap: 40px;
 }
 
-/*--------------------------------------メッセージ--------------------------------------*/
+/*--------------------------------------お客様の声--------------------------------------*/
 
-.message-image img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.voice-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
 }
 
-.message-text {
-    max-width: 500px;
+.voice-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
 }
 
-.message-text h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.message-text .subtitle {
-    color: orange;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.message-text p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.message-button {
+.voice-header h2 {
+    font-size: 2.2rem;
+    margin-right: 2.0rem;
+    border-bottom: 2px solid #ccc;
     display: inline-block;
-    background-color: orange;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    padding-bottom: 0.5rem;
 }
 
-.message-button:hover {
-    background-color: darkorange;
+.voice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.voice-card {
+    background: #fdfdfd;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.voice-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.voice-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.voice-card .comment {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/*--------------------------------------スタッフ紹介--------------------------------------*/
+.staff-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+}
+
+.staff-section h2 {
+    font-size: 2.2rem;
+    margin-right: 2.0rem;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.staff-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 0 auto 1rem;
+}
+
+.staff-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.role {
+    font-weight: bold;
+    color: #007acc;
+    margin-bottom: 0.5rem;
+}
+
+.comment {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.detail-btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.detail-btn:hover {
+    background: #005f99;
 }
 
 /*--------------------------------------会社概要--------------------------------------*/
@@ -858,7 +917,7 @@ html {
 
 .recruit-button {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 30px;
     padding: 12px 24px;
     background-color: #e67e22;
     color: #fff;
@@ -947,4 +1006,67 @@ html {
     background-color: #666;
 
 
+}
+
+/*--------------------------------------------------------------------------*/
+
+/* .construction-count は inline-flex のまま */
+.construction-count {
+    display: inline-flex;
+    align-items: center;
+    size: 20px;
+    margin-left: 500px;
+    margin-bottom: 40px;
+}
+
+
+
+.flow-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: "Helvetica", sans-serif;
+}
+
+.flow-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.flow-step {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #f9f9f9;
+    border-left: 4px solid #007acc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.flow-step:hover {
+    background: #eef6ff;
+}
+
+.step-number {
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007acc;
+    padding-top: 0.3rem;
+    min-width: 80px;
+}
+
+.step-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.step-content p {
+    margin: 0;
+    line-height: 1.5;
+    color: #444;
 }
